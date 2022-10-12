@@ -10,7 +10,7 @@ public class OperatorExpression {
         System.out.print("Nhập chiều dài hình chữ nhật:");
         height = scanner.nextFloat();
         area = width * height;
-        System.out.println("Diện tích: "+area);
+        System.out.println("Diện tích:"+area);
 
     }
 }
