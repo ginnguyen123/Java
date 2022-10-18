@@ -1,17 +1,19 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         //int[] array = inputElementToArray();
-        int[] arr = {2,5,7,4,2,6,7,2,7};
-        int[] newArr = addElementAtXLocation(8,333, arr);
+        int[] arr1 = {1,2,3};
+        int[] arr2 = {4,5,6};
+        int[] newArr = addArray(arr1, arr2);
         System.out.print("[");
-        for (int i=0;i<=arr.length-1;i++){
-            if (i == (arr.length - 1)){
-                System.out.print(arr[i] + "]");
+        for (int i=0;i<=newArr.length-1;i++){
+            if (i == (newArr.length - 1)){
+                System.out.print(newArr[i] + "]");
             }else {
-                System.out.print(arr[i] + ",");
+                System.out.print(newArr[i] + ",");
             }
         }
     }
@@ -45,5 +47,23 @@ public class Main {
         return newArray;
     }
 
+    public static int[] deletaElementAtXLocation(int xIndex, int[] array){
+        int[] newArray = Arrays.copyOf(array,array.length -1);
+        if (xIndex<0 || xIndex>=array.length){
+            System.out.println("Nhập sai giá trị index!");
+        }else {
+            for (int i = xIndex; i<newArray.length; i++){
+                newArray[i] = array[i-1];
+            }
+        }
+        return  newArray;
+    }
 
+    public static int[] addArray(int[] array1, int[] array2){
+        int[] newArray = Arrays.copyOf(array1, (array1.length + array2.length));
+        for (int i = array1.length; i < newArray.length; i++){
+            newArray[i] = array2[i - array1.length];
+        }
+        return newArray;
+    }
 }
