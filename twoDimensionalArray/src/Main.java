@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         int[][] arr = inputTwoDimensionalArr(3,3);
         int max = arr[0][0];
+        int total = totalMainDiagonal(arr);
+        int totalCol = totalColumArray(arr, 2);
         System.out.print(printTwoDimensionalArr(arr));
         for (int i = 0; i < arr.length; i++){
             for (int j = 1; j<arr[i].length; j++){
@@ -13,7 +15,10 @@ public class Main {
                 }
             }
         }
-        System.out.printf("Giá trị lớn nhất trong mảng: %d",max);
+        System.out.printf("Giá trị lớn nhất trong mảng: %d\n",max);
+        System.out.printf("Tổng đường chéo chính: %d\n",total);
+        System.out.printf("Tổng cột 2: %d\n",totalCol);
+
     }
     public static int[][] inputTwoDimensionalArr(int rows, int colums){
         int[][] arr = new int[rows][colums];
@@ -38,5 +43,20 @@ public class Main {
             }
         }
         return str;
+    }
+
+    public static int totalMainDiagonal(int[][] array){
+        int total = 0;
+        for (int i = 0; i<array.length; i++){
+            total += array[i][i];
+        }
+        return total;
+    }
+    public static int totalColumArray(int[][] array, int colum){
+        int total = 0;
+        for (int i = 0; i<array.length; i++){
+            total+= array[i][colum];
+        }
+        return total;
     }
 }
