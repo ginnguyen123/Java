@@ -1,3 +1,5 @@
+package Shape;
+
 public class SquareTest {
     public static void main(String[] args) {
         Square square = new Square();
