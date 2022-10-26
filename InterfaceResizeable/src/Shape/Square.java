@@ -6,7 +6,8 @@ public class Square extends Rectangle {
         super(side, side);
     }
     public Square(double side, String color, boolean filled){
-        super(side, side);
+        super.setLength(side);
+        super.setWidth(side);
         setColor(color);
         setFilled(filled);
     }
@@ -27,8 +28,8 @@ public class Square extends Rectangle {
     public String toString(){
         return  "A Shape.Square with side="
                 + getSide()
-                + ", which is a subclass of "
-                + super.toString();
+                + ", which is a subclass of ";
+                //+ super.toString();
     }
     @Override
     public void resize(double percent) {
