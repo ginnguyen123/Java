@@ -9,16 +9,16 @@ public class ResizeTest {
         System.out.println();
 
         for (Shape area : drawing) {
-            System.out.println(area.toString());
             if (area instanceof Circle ) {
                 System.out.println(((Circle) area).getArea());
+            }else{
+                if (area instanceof Rectangle) {
+                    System.out.println(((Rectangle) area).getArea());
+                }else{
+                    System.out.println(((Square) area).getArea());
+                }
             }
-            if (area instanceof Square) {
-                System.out.println(((Square) area).getArea());
-            }
-            if (area instanceof Rectangle) {
-                System.out.println(((Rectangle) area).getArea());
-            }
+
         }
         System.out.println();
 
