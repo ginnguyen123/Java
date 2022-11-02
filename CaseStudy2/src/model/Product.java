@@ -111,7 +111,7 @@ public class Product {
         DateFormat dataFormat = new SimpleDateFormat(dataTimeFormat);
         String dateCreatedFormatToString = dataFormat.format(this.dateCreated);
         String dateUpdatedFormatToString = dataFormat.format(Date.from((this.dateUpdated)));
-        return String.format("%s %s %s %s %s %s %s %s", this.id, this.name, this.quantitys,
+        return String.format("15%s %15s %15s %15s %15s %15s %15s %15s", this.id, this.name, this.quantitys,
                 this.prices, dateCreatedFormatToString, dateUpdatedFormatToString, this.madeIn, this.desinBy);
     }
 }

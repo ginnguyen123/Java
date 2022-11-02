@@ -1,7 +1,6 @@
 package views.user;
 
 import model.User;
-import services.UsersServices;
 
 import java.util.Date;
 
@@ -27,8 +26,8 @@ public class AddUserView extends UserViewTemplate {
         String address = scanner.nextLine();
         Date createDay = new Date();
         User inputUser = new User(idUser, nameUser, numPhones, email,address, createDay);
-        UsersServices.addUser(inputUser); // add vào ds users
+        usersServices.addUser(inputUser); // add vào ds users
 
-        showUsers(UsersServices.getUsers()); // hển thị lại danh sách users
+        showUsers(usersServices.getUsers()); // hển thị lại danh sách users
     }
 }

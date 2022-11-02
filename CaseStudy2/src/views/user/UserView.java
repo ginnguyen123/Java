@@ -8,6 +8,6 @@ public class UserView extends UserViewTemplate {
     @Override
     // ghi dè phương thuc showBody cua lop cha UserViewTemplate, gọi usersServices o lop cha, khoi tao ds user o UserServices
     public void showBody() {
-        showUsers(UsersServices.getUsers());
+        showUsers(usersServices.getUsers());
     }
 }

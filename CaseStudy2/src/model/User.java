@@ -72,7 +72,7 @@ public class User {
         String dateTimeFormat = "hh:mm:ss E dd:MM:yyyy";
         DateFormat dateFormat = new SimpleDateFormat(dateTimeFormat);
         String createdDay = dateFormat.format(this.createDay);
-        return String.format("%s %s %s %s %s %s \n", this.id, this.userName, this.numPhone, this.adress,
+        return String.format("%5s %5s %5s %10s %15s %15s \n", this.id, this.userName, this.numPhone, this.adress,
                 this.email, createdDay); //, this.idRole
     }
 
@@ -82,10 +82,5 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return id == user.id && Objects.equals(userName, user.userName) && Objects.equals(numPhone, user.numPhone) && Objects.equals(email, user.email) && Objects.equals(adress, user.adress) && Objects.equals(createDay, user.createDay);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, userName, numPhone, email, adress, createDay);
     }
 }
