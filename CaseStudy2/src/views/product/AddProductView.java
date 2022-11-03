@@ -1,5 +1,2 @@
-//package views.product;
-
-//public class AddProductView extends View {
-
-//}
+package views.product;public class AddProductView {
+}
