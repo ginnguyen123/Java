@@ -2,9 +2,8 @@ package views.product;
 
 import model.Product;
 import services.ProductServices;
-import views.View;
 
-public class ProductView extends View {
+public class ProductView extends ProductViewTemplate {
     private ProductServices productServices;
     public ProductView(){
         productServices = new ProductServices();

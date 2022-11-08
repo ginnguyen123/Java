@@ -16,8 +16,8 @@ public class EditUserView extends UserViewTemplate{
         if (usersServices.isfindUser(idUser)) {
             do {
                 System.out.println("1.User name.");
-                System.out.println("2.Phone number.");
-                System.out.println("3.Address.");
+                System.out.println("2.Address");
+                System.out.println("3.Phone number.");
                 System.out.println("0.Exit!");
                 Integer choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
@@ -26,10 +26,16 @@ public class EditUserView extends UserViewTemplate{
                         String userName = scanner.nextLine();
                         UsersServices.findUser(idUser).setUserName(userName);
                         break;
-//                    case 2:
-//                        break;
-//                    case 3:
-//                        break;
+                    case 2:
+                        System.out.println("Address: ");
+                        String address = scanner.nextLine();
+                        UsersServices.findUser(idUser).setAdress(address);
+                        break;
+                    case 3:
+                        System.out.println("Phone number: ");
+                        String numPhone = scanner.nextLine();
+                        UsersServices.findUser(idUser).setAdress(numPhone);
+                        break;
                     case 0:
                         flag = false;
                         break;

@@ -1,7 +1,5 @@
 package views.user;
 
-import services.UsersServices;
-
 public class UserView extends UserViewTemplate {
     //lớp hiển thị màn hình ds user
     public UserView(){}

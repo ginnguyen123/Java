@@ -1,8 +1,8 @@
 import views.View;
-import views.user.AddUserView;
+import views.product.AddProductView;
+import views.product.ProductView;
 import views.user.EditUserView;
 import views.user.RemoveUserView;
-import views.user.UserView;
 
 import java.util.Scanner;
 
@@ -34,8 +34,8 @@ public class DisplayScreen {
         boolean flag = true;
         do {
             System.out.println("Menu:");
-            System.out.println("1. Show list of users.");
-            System.out.println("2. Add User.");
+            System.out.println("1. Show list of products.");
+            System.out.println("2. Add products.");
             System.out.println("3. Remove User.");
             System.out.println("4. Edit user infomation.");
             System.out.println("0. Exit");
@@ -43,21 +43,22 @@ public class DisplayScreen {
             int menu = scanner.nextInt();
             switch (menu){
                 case 1:
-                    views = new UserView();
+                    views = new ProductView();
                     break;
                 case 2:
-                    views = new AddUserView();
+                    views = new AddProductView();
                     break;
                 case 3:
                     views = new RemoveUserView();
                     break;
                 case 4:
                     views = new EditUserView();
+                    break;
                 case 0:
                     flag = false;
+                    break;
             }
             views.showPage();
         }while (flag);
-
     }
 }

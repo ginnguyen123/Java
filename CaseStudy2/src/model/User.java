@@ -3,7 +3,6 @@ package model;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
 
 public class User {
     private long id;
@@ -74,13 +73,5 @@ public class User {
         String createdDay = dateFormat.format(this.createDay);
         return String.format("%5s %5s %5s %10s %15s %15s \n", this.id, this.userName, this.numPhone, this.adress,
                 this.email, createdDay); //, this.idRole
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id && Objects.equals(userName, user.userName) && Objects.equals(numPhone, user.numPhone) && Objects.equals(email, user.email) && Objects.equals(adress, user.adress) && Objects.equals(createDay, user.createDay);
     }
 }
