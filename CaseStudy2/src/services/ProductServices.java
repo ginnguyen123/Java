@@ -17,8 +17,6 @@ public class ProductServices {
         Instant createdUpdate = Instant.now();
         //Product(long id, String name, int quantitys, float prices, Date dateCreated,
         //                   Date dateUpdated, String madeIn, String desinBy)
-        products.add(new Product(1L,"20W USB-C power adapter", 1,
-                490000,creatDay,createdUpdate, "China", "Apple"));
         products.add(new Product(2L,"AirPods 2", 4,
                 2890000,creatDay,createdUpdate, "China", "Apple"));
         products.add(new Product(3L,"Apple Watch SE", 2,
@@ -27,6 +25,8 @@ public class ProductServices {
                 20000000,creatDay,createdUpdate, "China", "Apple"));
         products.add(new Product(5L,"Magic Mouse 2", 1,
                 1800000,creatDay,createdUpdate, "China", "Apple"));
+        products.add(new Product(1L,"20W USB-C power adapter", 1,
+                490000,creatDay,createdUpdate, "China", "Apple"));
     }
     public static ArrayList<Product> getProducts(){
         return products;
@@ -78,10 +78,10 @@ public class ProductServices {
         }
         return result;
     }
-    public void sortByProductName(Comparator<Product> comparatorProductName){
+    public static void sortByProductName(Comparator<Product> comparatorProductName){
         products.sort(comparatorProductName);
     }
-    public void sortByProductPrice(Comparator<Product> comparatorProductPrice){
+    public static void sortByProductPrice(Comparator<Product> comparatorProductPrice){
         products.sort(comparatorProductPrice);
     }
 }

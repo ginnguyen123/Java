@@ -2,18 +2,17 @@ package services;
 
 import model.User;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+
 
 public class UsersServices {
-    private static Set<User> users;
+    private static List<User> users;
     // lưu trữ thông tin user theo set, không trùng lặp thông tin user
 //    public UsersServices() {
 //
 //    }
     static {
-        users = new HashSet<>();
+        users = new ArrayList<>();
         //khởi tạo thông tin user ban đầu
         Date createDay = new Date();
         // User(long id, String userName, String numPhone, String email, String adress, Date createDay, int idRole)
@@ -27,11 +26,11 @@ public class UsersServices {
 //                "123/23/12 kasdkasd", createDay));
     }
 
-    public static Set<User> getUsers() {
+    public static List<User> getUsers() {
         //getUsers.toString > phương thức trả về mảng Object
         return users;
     }
-    public static void setUsers(Set<User> users) {
+    public static void setUsers(List<User> users) {
         users = users;
     }
     public static void addUser(User user){

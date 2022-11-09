@@ -1,8 +1,8 @@
 import views.View;
 import views.product.AddProductView;
 import views.product.ProductView;
+import views.product.SortProducView;
 import views.user.EditUserView;
-import views.user.RemoveUserView;
 
 import java.util.Scanner;
 
@@ -36,7 +36,7 @@ public class DisplayScreen {
             System.out.println("Menu:");
             System.out.println("1. Show list of products.");
             System.out.println("2. Add products.");
-            System.out.println("3. Remove User.");
+            System.out.println("3. Sort products.");
             System.out.println("4. Edit user infomation.");
             System.out.println("0. Exit");
             System.out.print("Enter: ");
@@ -49,7 +49,7 @@ public class DisplayScreen {
                     views = new AddProductView();
                     break;
                 case 3:
-                    views = new RemoveUserView();
+                    views = new SortProducView();
                     break;
                 case 4:
                     views = new EditUserView();

@@ -54,7 +54,7 @@ public class Product {
     }
 
     public float getPrices() {
-        return prices;
+        return this.prices;
     }
 
     public int getQuantitys() {
